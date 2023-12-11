@@ -162,7 +162,7 @@ int cfree(void **);
 
 /* toem_atois.c */
 int interactive(infos_t *);
-int is_delim(char, char *);
+int is_delims(char, char *);
 int _isalpha(int);
 int _atois(char *);
 
