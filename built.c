@@ -13,7 +13,7 @@ int _myexit(infos_t *infos)
 
 	if (infos->argv[1])  /* If there is an exit arguement */
 	{
-		exitcheck = _erratoi(infos->argv[1]);
+		exitcheck = _erratois(infos->argv[1]);
 		if (exitcheck == -1)
 		{
 			infos->status = 2;
@@ -48,7 +48,7 @@ int _mycd(infos_t *infos)
 		dir = _getenv(infos, "HOME=");
 		if (!dir)
 			chdir_ret = /* TODO: what should this be? */
-				chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
+				chdir((dir = _getenv(infos, "PWD=")) ? dir : "/");
 		else
 			chdir_ret = chdir(dir);
 	}
