@@ -95,7 +95,7 @@ void find_cmd(infos_t *infos)
 		infos->linecount_flag = 0;
 	}
 	for (i = 0, k = 0; infos->arg[i]; i++)
-		if (!is_delim(infos->arg[i], " \t\n"))
+		if (!is_delims(infos->arg[i], " \t\n"))
 			k++;
 	if (!k)
 		return;
